@@ -1,2 +1,1 @@
-# hcde598e-sp19
-HCDE589E-SP19
+HCDE 598 Special Topics Digital Fabrication
