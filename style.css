@@ -1,69 +1,112 @@
-
-html, body {
-  padding: 0 0 0 0;
-  margin: 0;
-  font-family: 'helvetica', 'arial', 'sans';
+body {
+    margin: 0;
+    background: #ffffff;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
-h1,h2,h3,h4 {
-  font-family: 'helvetica', 'arial', 'sans';
-  }
-
-
-a {
-  color: #000;
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
-.header {
-  background: #fff;
-  color: #000;
-  height: 500px;
-  padding: 30px 30px 30px;
+p {
+    margin: 0;
+    line-height: 1.8;
+    font-size: 1em;
+    color: #000000;
 }
 
-.header h1 {
-  font-size: 50px;
-  }
+.banner {
+    background: url(images/background.png)no-repeat center 0px fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
 
-.assignment {
-  font-size: 12px;
-  line-height: 24px;
-  font-family: 'helvetica', 'arial', 'sans';
-  padding: 20px 20px 20px 30px;
-  width: 250px;
-  height: 350px;
-  float: left;
 }
 
-.assignment a {
-    color: #000;
-    text-decoration: none;
+.banner-text {
+    padding: 16em 0;
+    text-align: center;
 }
 
-.assignment a:hover {
-  background: #F06;
-  color: #F06;
-  text-decoration: none;
+.banner-text h1 {
+    font-size: 3.5em;
+    line-height: 1.5em;
+    display: inline-block;
+    border: solid #7ecaf6;
+    border-width: 4px;
+    color: rgb(255, 255, 255);
+    background: #567182;
+    padding: 0 1em;
+    letter-spacing: 1px;
+    font-weight: 800;
 }
 
+.banner-text h2 {
+    color: #ffffff;
+    margin: 0.8em 0 0.2em;
+    font-size: 4em;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
 
-.footer {
-    width: 1100px;
+.banner-text h2 span {
+    font-weight: 800;
+}
+
+.banner-text p {
+    font-size: 1.2em;
+    color: #fff;
+    padding-top: 1em;
+    letter-spacing: 1px;
+    display: inline-block;
+    border-top: 4px double #fff;
+}
+
+.section {
+    padding: 5em 0;
+}
+
+.section h3 {
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-bottom: 1.5em;
+    color: #1853a1;
+    text-align: center;
+}
+
+.about p {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.assignment .image {
+    padding: 0;
     float: left;
-    padding: 300px 0px 30px 30px;
 }
 
-.widebody {
-    width: 800px;
-    padding: 0px 30px 30px 30px;
+.assignment .info {
+    padding: 1em;
+    background: #ffffff;
 }
 
-.widebody a {
+.assignment .info h5 {
+    color: #000000;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin: 0;
 }
 
-.widebody a:hover {
-  background: #F06;
-  color: #FFF;
-  text-decoration: none;
+.assignment .info p {
+    color: #999999;
+    font-size: .9em;
+    line-height: 1.8em;
+    margin: .5em 0 0 0;
 }
-
