@@ -110,3 +110,16 @@ p {
     line-height: 1.8em;
     margin: .5em 0 0 0;
 }
+
+.assignment .image:hover .info {
+    background: #03afdd;
+    color: #FFFFFF;
+}
+
+.assignment .image:hover a {
+    text-decoration: none;
+}
+
+.assignment .image:hover .info p {
+    color: #FFFFFF;
+}

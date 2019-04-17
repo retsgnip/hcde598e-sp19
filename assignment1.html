@@ -1,25 +1,105 @@
-<!DOCTYPE html> 
-<html> 
-    <head> 
-        <meta charset="utf-8"> 
-        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+<head>
+    <link href="style.css" type="text/css" rel="stylesheet" media="all">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arsenal:400,400i,700,700i" rel="stylesheet">
 
-        <title>Example Student's HCDE 439 Physical Computing Page!</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Assignment 1: Laser cut press fit construction kit!</title>
+</head>
 
-        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+<body>
+    <div class="text-center section">
+        <div class="container">
+            <h3>Assignment 1: Laser cut press fit construction kit!</h3>
+            <div class="text-left">
+                <h2>Process</h2>
+                <p>I used the laser cutter to cut out some pieces from cardboard that I could then assemble into 3D
+                    shapes.</p>
 
-    </head> 
-    <body> 
+                <p>&nbsp;</p>
+                <h4>Design and execution</h4>
+                <p>I started by sketching out the basic shape for my main construction piece. I decided on a square
+                    that’s 40 mm x 40 mm. I made notches in the cardboard that was 10 mm deep so that there’s enough
+                    friction to hold the pieces together without any glue. Knowing that the thickness of the cardboard
+                    was 2.6 mm, I initially made the width of the notches to be 10 mm.</p>
+                <p><img src="images/A1-IMG_20190416_211148674.jpg" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>For variety, I also made rectangular connector pieces that were 15 mm x 40 mm, also with 2.6 mm x 10
+                    mm notches at the sides.</p>
 
-        <div class="header">
-            <h1>Example Student's Assignment 1!</h1>
-            <p>
-            <img src="red-panda.jpg" width=400></a>
-            </p>
-            <p>
-            Here is all the documentation for assignment 1!
-            </p>
+                <p>&nbsp;</p>
+                <h4>First attempt</h4>
+                <p>Using Illustrator to create the shape to print out, I created 2 sample shapes so that they can be
+                    test fitted together. On the Epilog Engraver laser cutter, the shapes were printed using the
+                    following settings configured within the laser cutter’s print driver: 50% speed, 100% power, and 50%
+                    frequency. The size of the cardboard was also configured into the print driver dialog.</p>
+                <p><img src="images/A1-Capture4.PNG" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>Here was the initial prototype.</p>
+                <p><img src="images/A1-IMG_20190410_214327784.jpg" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>I found that when setting the width of the notches on the square to be the same as the width of the
+                    cardboard, the fitting was too loose. As the cardboard has a little bit of give, the width of the
+                    notches needed to be slightly smaller than the width so that there’s enough friction to hold the
+                    pieces together.</p>
+
+                <p>Additionally, printing with 100% power resulted in the edges of the cardboard being burnt. The
+                    cardboard used had a painted white side that clearly showed scorched marks.</p>
+
+                <p>&nbsp;</p>
+                <h4>Second attempt</h4>
+                <p>Based on the first trial, I adjusted the width of the notches to be 2 mm so that there will be more
+                    friction to hold the pieces together. Based on feedback, the corners were rounded to make it easier
+                    to fit the pieces together.</p>
+                <p><img src="images/A1-Capture1.PNG" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>I reduced the power of the laser cutter head from within the print driver to 50% speed, 75% power,
+                    and 50% frequency. </p>
+                <p><img src="images/A1-Capture8.PNG" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>The notches were too narrow this time and the pieces didn’t slide in nicely. You can see the
+                    cardboard was being bent due to stress in the picture below. However, the laser didn’t scorch the
+                    cardboard with the reduced power setting.</p>
+                <p><img src="images/A1-IMG_20190416_161309992.jpg" width="50%" height="50%" /></p>
+
+                <p>&nbsp;</p>
+                <h4>Third attempt</h4>
+                <p>The notches were increased to be 2.2 mm x 10 mm while keeping the same printer settings as the
+                    previous attempt. </p>
+                <p><img src="images/A1-IMG_2092.jpg" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>This seemed to produce an acceptable result where the pieces slide in nicely with each other but
+                    still maintained a good hold. A 3D object could be easily assembled with these pieces.</p>
+                <p><img src="images/A1-IMG_20190416_161138537.jpg" width="50%" height="50%" /></p>
+
+                <p>&nbsp;</p>
+                <h2>Learnings</h2>
+                <p>I learned that for best results, it’s important to set the power on the laser to the minimum setting that will still cut the material but not burn it. Additionally, accounting for the width of the cardboard was tricky and required numerous attempts to get an acceptable result.</p>
+
+                <p>&nbsp;</p>
+                <h2>Source files</h2>
+                <p><a href="images/assignment1.ai">assignment1.ai</a></p>
+
+                <p>&nbsp;</p>
+                <h2>Thanks!</h2>
+                <p>Much appreciation to Leo (<a href="https://leosalemann.github.io/">@LeoSalemann</a>) and José (<a href="https://malvenko.github.io/">@malvenko</a>) for helping me with the laser cutter. Also thanks to Joshua (@JoshuaV) for his tip on rounding the corners to make things fit together nicely.</p>
+            </div>
         </div>
-        
-    </body>
+    </div>
+</body>
+
 </html>
