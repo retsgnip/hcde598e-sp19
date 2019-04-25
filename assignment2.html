@@ -1,25 +1,86 @@
-<!DOCTYPE html> 
-<html> 
-    <head> 
-        <meta charset="utf-8"> 
-        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+<head>
+    <link href="style.css" type="text/css" rel="stylesheet" media="all">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arsenal:400,400i,700,700i" rel="stylesheet">
 
-        <title>Example Student's HCDE 439 Physical Computing Page!</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Assignment 2: CAD model + fabricated output!</title>
+</head>
 
-        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+<body>
+    <div class="text-center section">
+        <div class="container">
+            <h3>Assignment 2: CAD model + fabricated output!</h3>
+            <div class="text-left">
+                <h2>Process</h2>
+                <p>This was a fun project and really demonstrated the power of quickly creating similar components quickly.</p>
 
-    </head> 
-    <body> 
+                <p>&nbsp;</p>
+                <h4>Design and execution</h4>
+                <p>To get familiar with Rhino3D and Grasshopper, I started with recreating the construction kit designs from A1 drawn using commands from Grasshopper. </p>
+                <p>&nbsp;</p>
+                <p>Initially I started off with recreating the shape using a series of polyline segments but that quickly became unwieldly. One of the biggest challenge this week was figuring out how to express the items created last week with basic shapes and geometries. For example, it took several attempts to realize that notches within the construction kit can be created as rectangles that are superimposed on top of an existing shape and then apply a region difference to create the notches.</p>
+                <p><img src="images/A2-1.png" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>The square construction piece was parameterized so that the size of the piece as well as the depth and width of the notches, and number of notches are all customizable via a number slider.</p>
+                <p><img src="images/A2-2.png" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>For the rectangular construction piece, in addition to the parameters for the depth and width of the notches, the piece was modified so that it could be printed with a curve. Some geometry math skills required here to draw the piece mathematically with an arc component. Also had to calculate how to rotate the notch in relation to the curve.</p>
+                <p><img src="images/A2-3.png" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>Some adjustments had to be made in when opening the exported files in Illustrator. I manipulated the positioning of the items to make it fit on the cardboard I had on hand. I also had to change the line thickness of the shapes so that they print out as vectors.</p>
+                <p>&nbsp;</p>
+                <p>When printing, the laser cutter settings that worked well from Assignment 1 for the thick piece of cardboard was used initially (50% speed/75% power/50% freq). However, some trial and error attempts required for the thin piece of cardboard. Tried out two settings 50% speed/50% power/50% freq and 50% speed/25% power/50% freq and found that less power was required.</p>
+                <p><img src="images/A2-IMG_20190422_234757809.jpg" width="50%" height="50%" /></p>
 
-        <div class="header">
-            <h1>Example Student's Assignment 2!</h1>
-            <p>
-            <img src="red-panda.jpg" width=400></a>
-            </p>
-            <p>
-            Here is all the documentation for assignment 2!
-            </p>
+                <p>&nbsp;</p>
+                <p>With the modified curved pieces from this week, I was able to create circular structures of varying diameters.</p>
+                <p><img src="images/A2-IMG_20190423_222907876.jpg" width="50%" height="50%" /></p>
+                <p><img src="images/A2-IMG_20190423_222934016.jpg" width="50%" height="50%" /></p>
+
+                <p>&nbsp;</p>
+                <h2>Learnings</h2>
+                <p>The scale of the exported items from Rhino3D to Illustrator was something to watch out for. The model scale needed to be defined. Otherwise, the exported shapes were the wrong size when opened in Illustrator.</p>>
+                <p><img src="images/A2-4.png" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>It was too easy to link components in Grasshopper haphazardly. What ended up was a mess of components and lines. When debugging issues, it became very difficult to figure out where the values were coming from.</p>
+                <p><img src="images/A2-grasshopper.png" width="75%" height="75%" /></p>
+                <p>&nbsp;</p>
+                <p>Learning how to group related and repeated actions into Clusters was critical to organizing things. Also helped with abstracting a series of simple steps from the main view so that I could concentrate on higher level components.</p>
+                <p><img src="images/A2-5.png" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>With the components grouped into logical Clusters and groups, it made it easier to understand what was going on with the overall diagram.</p>
+                <p><img src="images/A2-grasshopper2.png" width="75%" height="75%" /></p>
+
+                <p>&nbsp;</p>
+                <h2>Source files</h2>
+                <p>Grasshopper file defining programmatically generated pieces: <a href="images/assignment2.gh">assignment2.gh</a></p>
+                <p>Rhino3D model file: <a href="images/assignment2.3dm">assignment2.3dm</a></p>
+                <p>Generated Adobe Illustrator file with notches at 0.2 mm for thin cardboard: <a href="images/assignment2-0.2mm.AI">assignment2-0.2mm.AI</a></p>
+                <p>Generated Adobe Illustrator file with notches at 2.2 mm for thick cardboard: <a href="images/assignment2-2.2mm.AI">assignment2-2.2mm.AI</a></p>
+                <p>Laser cutter settings for thin cardboard: <i>50% speed/25% power/50% freq</i></p>
+                <p>Laser cutter settings for thick cardboard: <i>50% speed/75% power/50% freq</i></p>
+
+                <p>&nbsp;</p>
+                <h2>Thanks!</h2>
+                <p>Special thanks to Leo (<a href="https://leosalemann.github.io/">@LeoSalemann</a>) for showing me how to group things together in Groups and Clusters. This helped with organizing components in Grasshopper.</p>
+            </div>
         </div>
-        
-    </body>
+    </div>
+</body>
+
 </html>
