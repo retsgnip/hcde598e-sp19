@@ -1,0 +1,116 @@
+<head>
+    <link href="style.css" type="text/css" rel="stylesheet" media="all">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arsenal:400,400i,700,700i" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Assignment 3: 3D printing + lasercutting lamp!w</title>
+</head>
+
+<body>
+    <div class="text-center section">
+        <div class="container">
+            <h3>Assignment 3: 3D printing + lasercutting lamp!</h3>
+            <div class="text-left">
+                <h2>Process</h2>
+                <p>First time using a 3D printer and it was exciting to see things drawn on a computer show up in front
+                    of my eyes (eventually!)</p>
+
+                <p>&nbsp;</p>
+                <h4>Design and execution</h4>
+                <p>I decided to design this assignment’s lamp around a hanging LED lamp from Amazon. The intent is to
+                    create a desktop lamp.</p>
+                <p><img src="images/A3-IMG_20190501_003734324.jpg" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>Knowing that there’s a flat base on the original lamp, the idea was to build a platform that the lamp
+                    will sit on and then add elements to create the lampshade for the overall lamp. I decided to extend
+                    the base of original hexagonal shape.</p>
+                <p>Within Rhino3D, I created a hexagon polygon that is slightly bigger than the original as a curve.
+                </p>
+                <p><img src="images/A3-1.png" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>I then used the <i>ExtrudeCrv</i> and <i>Cap</i> commands to create a 3D surface. To reduce the
+                    amount of time it will take to 3D print the shape, instead of having the shape completely solid, I
+                    decided to cut an opening in the middle. Taking advantage of the circular lens that’s on the
+                    original light, I created a circle cutout that could be used to sandwich the light in between two
+                    layers to keep it in place.</p>
+                <p><img src="images/A3-2.png" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>The lampshade will be used to create the structure that will be used to sandwich the lamp to keep it
+                    in place. I created vertical support structures using laser cut from cardboard with notches that
+                    will hold the entire structure in place. The vertical structures were created in Rhino3D initially.
+                </p>
+                <p><img src="images/A3-3.png" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>The shape was then further finetuned in Adobe Illustrator to tweak the size and line thickness so
+                    that it’s suitable for cutting on the laser cutter. Six of these were created on a laser cutter.</p>
+                <p>In Rhino3D, it was easy to model what the eventual lamp will look like.</p>
+                <p><img src="images/A3-4.png" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>With the base objects exported to .stl format, I imported them into Dremel DigiLab 3D Slicer so that
+                    they can be converted into a .gcode file for printing.</p>
+                <p><img src="images/A3-5.png" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>Two base objects were printed.</p>
+                <p><img src="images/A3-IMG_20190429_104003679.jpg" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>Once assembled with the LED light inside, the final product looks like the following.</p>
+                <p><img src="images/A3-IMG_20190429_113314865.jpg" width="50%" height="50%" /></p>
+
+                <p>&nbsp;</p>
+                <h2>Learnings</h2>
+
+                <p>The 3D printer took much longer than expected. 3D printing a piece that was 90mm x 78.1mm x 2mm took
+                    close to 30 mins at Low Quality 0.2mm resolution on the Dremel 3D45 printer. This meant it was
+                    crucial to get the design correct on the first try.</p>
+                <p>It was important to specify the dimensions when importing .stl files to Dremel so that the objects
+                    were the same size as in Rhino3D. Again, transferring objects from application to application can
+                    sometimes be tricky.</p>
+
+                <p>I tried using <i>UnrollSrf</i> command to unroll a surface as a flat surface so that it can be 3D
+                    printed as shown during class to create a lampshade made up of a repeated pattern layered on top of
+                    a surface. Unfortunately, I ran into issues with extracting a surface. More experimentation required
+                    to get this right.</p>
+
+
+                <p>&nbsp;</p>
+                <h2>Source files</h2>
+
+                <p>Rhino3D of lamp: <a href="images/assignment3.3dm">assignment3.3dm</a></p>
+
+                <p>Bottom plate .stl file: <a href="images/assignment3-bottom.stl">assignment3-bottom.stl</a></p>
+
+                <p>Bottom plate .gcode file: <a
+                        href="images/assignment3-D3_bottom.gcode">assignment3-D3_bottom.gcode</a></p>
+                <p>Lampshade support file for laser cutting: <a
+                        href="images/assignment3-connectorpiece.ai">assignment3-connectorpiece.ai</a></p>
+
+                <p>Laser cutter settings the lampshade cardboard: <i>50% speed/75% power/50% freq</i></p>
+
+
+                <p>&nbsp;</p>
+                <h2>Thanks!</h2>
+
+                <p>Thanks to Hannah (<a href="https://hcnursalim.github.io">@hcnursalim</a>) for her help with
+                    transferring .stl files from Rhino to Dremel.</p>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
