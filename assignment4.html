@@ -1,0 +1,211 @@
+<head>
+    <link href="style.css" type="text/css" rel="stylesheet" media="all">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arsenal:400,400i,700,700i" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Assignment 4: Moving parts</title>
+</head>
+
+<body>
+    <div class="text-center section">
+        <div class="container">
+            <h3>Assignment 4: Moving parts</h3>
+            <div class="text-left">
+                <h2>Process</h2>
+                <p>Model moving parts in 3D using OnShape. Some things were easier to create in OnShape. Seeing the
+                    parts being assembled and animate was very satisfying.</p>
+                <p>I was interested to see how gears can be modeled within OnShape as this could be something that I
+                    could use in the final project. This assignment was a good opportunity to learn how to do so.</p>
+
+                <p>&nbsp;</p>
+                <h4>Design and execution</h4>
+                <p>I decided to create a “hand” that can be driven by two gears. First, some sketches to plan out what
+                    the final product will look like. It consists of a base plate holding the gears, two gears, and an
+                    arm.</p>
+                <p><img src="images/A4-IMG_20190508_003336734.jpg" width="50%" height="50%" /></p>
+
+                <p>&nbsp;</p>
+                <h4>CAD design in OnShape</h4>
+                <p>Some math involved to design the gear. From online sources, I used the commonly used pressure angle
+                    of 20 degrees. I also picked a diametral pitch of 24, 36 gear teeth. I then used the formulas to
+                    calculate the pitch diameter, pitch circle, and outside diameters to get the basic dimensions of the
+                    gear.</p>
+                <p><img src="images/A4-IMG_20190508_003329684.jpg" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>I modeled the gear in Onshape in a sketch in <i>Normal to</i> view. Construction lines were used to
+                    define the helper arcs and lines to draw the gear using the figures from the gear calculations from
+                    above.</p>
+                <p><img src="images/A4-1.png" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>The sketch was then extruded to the thickness of the acrylic plastic sheet that I’ll be using to
+                    laser cut.</p>
+                <p><img src="images/A4-2.png" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>The <i>circular pattern</i> command that allowed me to repeat the gear’s tooth pattern around the
+                    entire shape. This made things a lot easier as I didn’t need to draw every tooth.</p>
+                <p><img src="images/A4-3.png" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>To finish this off, an elbow arm was created.</p>
+                <p><img src="images/A4-4.png" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>Bolts to assemble the contraption was also created.</p>
+                <p><img src="images/A4-5.png" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>Everything will be mounted on a base plate with axels embedded within the plate for the gears.</p>
+                <p><img src="images/A4-6.png" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>In the Assembly view, I hooked up the gears to the base plate using a Revolve mate, bolts to the
+                    gears using a Fasten mate, and connected the gear’s revolve mates together with a Gear mate. The arm
+                    was connected to the gear with a Revolve mate to allow some freedom of movement.</p>
+                <p><img src="images/A4-7.png" width="50%" height="50%" /></p>
+
+                <p>&nbsp;</p>
+                <h4>3D printing</h4>
+                <p>I decided to 3D print the base plate and pins as they are 3-dimensional objects. The pins were
+                    exported as an STL file from OnShape. It was then imported into Simplify3D. The default Dremel Idea
+                    Builder 3D40 settings within Simplify3D seemed reasonable and produced good results.</p>
+                <p><img src="images/A4-8.png" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>The same process was applied to the base plate.</p>
+                <p><img src="images/A4-9.png" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>Multiple parts were printed at the same time for efficiency.</p>
+                <p><img src="images/A4-IMG_20190507_223936888.jpg" width="50%" height="50%" /></p>
+
+                <p>&nbsp;</p>
+                <h4>Laser cutting</h4>
+                <p>The gears and arm were created by cutting out the shapes on a piece of 1/16” thickness acetal
+                    copolymer sheet using a laser cutter. </p>
+                <p>First, the parts that were modeled in OnShape had to be exported into a vector file like .svg.
+                    Unfortunately, I wasn’t able to have OnShape export to a file that wasn’t either scaled or
+                    rasterized via the built-in DXF exporter. As a workaround, I exported the shapes as a .stl file
+                    first and then imported them into Rhino3D.</p>
+                <p>Within Rhino3D, I first exploded the object to separate the faces using the <i>Explode</i> command. I
+                    will use the face as the template to create a 2D representation of what I will be laser cutting.</p>
+                <p><img src="images/A4-10.png" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>I then used the <i>DupBorder</i> to create a border outline of the shape. This was then exported as
+                    an AI file for printing in Adobe Illustrator.</p>
+                <p><img src="images/A4-11.png" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>Minor adjustments were made in Adobe Illustrator to ensure that the shape will be interpreted as
+                    vectors so that they can be printed quickly.</p>
+                <p><img src="images/A4-IMG_20190506_235524177.jpg" width="50%" height="50%" /></p>
+
+                <p>&nbsp;</p>
+                <h4>Final product</h4>
+                <p>Once assembled, the contraption looks like the following.</p>
+                <p><img src="images/A4-IMG_20190508_003402750.jpg" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>Turning the gears will spin the arm.</p>
+                <p><video width="320" height="240" controls>
+                        <source src="images/A4-VID_20190508_003642435~2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video></p>
+
+                <p>&nbsp;</p>
+                <h2>Learnings</h2>
+                <p>For some reason, the base plate couldn’t be spliced using Dremel DigiLab 3D Slicer. It produced files
+                    that failed to copy onto the printer. One thing I noticed was that the estimated print time when
+                    this happens is 0 mins. With advice from the staff at The MILL, I spliced the object in Simplify3D
+                    which worked fine. </p>
+                <p>I found that when converting from one file type to another, I often ran into issues where the
+                    object’s scaling was off. For example, this seems to be prevalent after switching units, like from
+                    millimeters to inches or vice versa, within OnShape. Dremel DigiLab 3D would incorrect size the
+                    object to be too small. It was good practice to verify the scale of all imported objects and resize
+                    them uniformly if the scaling was incorrect.</p>
+                <p>Good thing Joshua talked about kerf last week. He was right that cardboard was very forgiving.
+                    Plastic, on the other hand, needed to be precise for things to fit together.</p>
+
+
+                <p>&nbsp;</p>
+                <h2>Source files</h2>
+                <p><div>Simplify3D Process Settings</div>
+                    <ul>
+                        <li>Profile: Dremel Idea Builder 3D40</li>
+                        <li>Layer> Layer Settings> Primary Layer Height: 0.2000 mm</li>
+                        <li>Additions> Use Skirt/Brim: checked</li>
+                        <li>Infill> General> Internal Fill Pattern: Rectilinear</li>
+                        <li>Infill> General> External Fill Pattern: Rectilinear</li>
+                        <li>Support> Support Material Generation> Generate Support Material: checked</li>
+                    </ul>
+                </p>
+                <p><div>Epilog Fusion M2 laser cutter settings:</div>
+                    <ul>
+                        <li>Speed: 7%</li>
+                        <li>Power: 100%</li>
+                        <li>Freq: 50%</li>
+                    </ul>
+                </p>
+                <p>OnShape project file: <a
+                        href="https://cad.onshape.com/documents/d9cd12ae48a1782f20ba7b16/w/0bcc1f452acb58d4a0716931/e/95ff2917f099b321f4549897">here</a>
+                </p>
+                <p><div>3D parts</div>
+                    <ul>
+                        <li><div>Gear handle:</div><ul>
+                                <li>STL file: <a href="images/A4-Gear handle.stl">A4-Gear handle.stl</a></li>
+                                <li>Simplify3D project file: <a href="images/A4-Gear handle.factory">A4-Gear
+                                        handle.factory</a></li>
+                                <li>G3DREM file for printer: <a href="images/A4-Gear handle.g3drem">A4-Gear
+                                        handle.g3drem</a></li>
+                            </ul>
+                        </li>
+                        <li><div>Base plate:</div><ul>
+                                <li>STL file: <a href="images/A4-Base plate.stl">A4-Base plate.stl</a></li>
+                                <li>Simplify3D project file: <a href="images/A4-Base plate.factory">A4-Base
+                                        plate.factory</a></li>
+                                <li>G3DREM file for printer: <a href="images/A4-Base plate.g3drem">A4-Base
+                                        plate.g3drem</a></li>
+                            </ul>
+                        </li>
+                        <li><div>Base plate (small):</div><ul>
+                                <li>STL file: <a href="images/A4-Base plate small.stl">A4-Base plate small.stl</a></li>
+                                <li>Simplify3D project file: <a href="images/A4-Base plate small.factory">A4-Base plate
+                                        small.factory</a></li>
+                                <li>G3DREM file for printer: <a href="images/A4-Base plate small.g3drem">A4-Base plate
+                                        small.g3drem</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </p>
+                <p><div>Laser cut parts</div>
+                    <ul>
+                        <li>Gear: <a href="images/A4-Gear.ai">A4-Gear.ai</a></li>
+                        <li>Arm: <a href="images/A4-Arm.ai">A4-Arm.ai</a></li>
+                    </ul>
+                </p>
+
+                <p>&nbsp;</p>
+                <h2>Thanks!</h2>
+                <p>Thanks to JoshuaV on his tips for offsetting edges. Also thanks to Haihua for her tips on the laser
+                    cutter settings for cutting plastic. Lower the speed definitely helped with the quality of the cuts.
+                    Jose Santos from Makezine provided excellent instructions for converting STL files for laser
+                    cutting.</p>
+                <p>&nbsp;</p>
+                <h4>References</h4>
+                <p>Santos, J. (2015, July 14). <i>Skill Builder. Convert a STL File for Laser Cutting.</i> Retrieved
+                    from <a
+                        href="https://makezine.com/projects/skill-builder-convert-stl-file-laser-cutting/">https://makezine.com/projects/skill-builder-convert-stl-file-laser-cutting/</a>.
+                </p>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
