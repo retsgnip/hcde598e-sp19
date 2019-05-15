@@ -1,0 +1,123 @@
+<head>
+    <link href="style.css" type="text/css" rel="stylesheet" media="all">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arsenal:400,400i,700,700i" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Assignment 5: Subtractive Fabrication and CNC Milling</title>
+</head>
+
+<body>
+    <div class="text-center section">
+        <div class="container">
+            <h3>Assignment 5: Subtractive Fabrication and CNC Milling</h3>
+            <div class="text-left">
+                <h2>Process</h2>
+                <p>Creating things with a milling machine was a different experience compared to previous assignments.
+                    Thinking about how the path that router bit will use to cut through the material added to the design
+                    challenge.</p>
+
+                <p>&nbsp;</p>
+                <h4>Design and execution</h4>
+                <p>I decided to create a box with two types of corner joints as shown in the blog post from Nadya. I
+                    used a combination of finger joints as they are simple to create and fingertip joints for better
+                    hold on the pieces. </p>
+
+                <p>&nbsp;</p>
+                <h4>CAD</h4>
+                <p>I started by creating the bottom side. I created dog bones at the corners to account for the path
+                    that the bit will have to take when creating sharp angles. I found that it was easy to create the
+                    same joint pattern on each side of the face using the <i>Linear Pattern</i> command to duplicate the
+                    joint across an edge followed by a <i>Circular Pattern</i> command to copy the joint to the three
+                    other sides.</p>
+                <p><img src="images/A5-1.png" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>With one face was created, I created a matching face perpendicular shape for the sides.</p>
+                <p><img src="images/A5-2.png" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>With the <i>Transform</i> command’s <i>Rotate</i> and <i>Translate by XYZ</i> options, I was able to
+                    move the pieces to the correct orientation. The <i>Copy part</i> checkbox allowed me to quickly
+                    duplicate pieces for the various sides of the box. </p>
+                <p><img src="images/A5-3.png" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>After creating a shape for the front and back side of the box, the final box looked like this.</p>
+                <p><img src="images/A5-4.png" width="50%" height="50%" /></p>
+
+                <p>&nbsp;</p>
+                <h4>CNC Milling</h4>
+                <p>I exported the individual shapes from OnShape as DXF files. I then imported them into Kicad to
+                    convert them into GBR files. This was then imported into the Bantam tool so that they can be milled
+                    on the machine. Within Bantam, the placement x, y, z values had to be changed to account for the FR1
+                    sandwich I was going to use for milling.</p>
+                <p><img src="images/A5-5.png" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>Milling was quick as my pieces were intentionally scaled small to begin with.</p>
+                <p><video width="320" height="240" controls>
+                        <source src="images/A5.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video></p>
+                <p>&nbsp;</p>
+                <p>Once all the pieces were cut, I was able to assemble the box laid out flat.</p>
+                <p><img src="images/A5-IMG_20190513_223238373.jpg" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+                <p>Here is the box assembled.</p>
+                <p><img src="images/A5-IMG_20190514_222742493.jpg" width="50%" height="50%" /></p>
+                <p>&nbsp;</p>
+
+                <p>&nbsp;</p>
+                <h2>Learnings</h2>
+                <p>Within Bantam, it was helpful to set the z-offset positioning to be slightly more so that I can
+                    guarantee a cut all the way through the material. If I didn’t do that, there were slight variances
+                    in the thickness of the material.</p>
+                <p>In OnShape, it was important to allow for some tolerances between where the pieces came together. I
+                    didn’t account for that initially and that resulted in too tight of a fit. I had to file down some
+                    of the joints to make them fit.</p>
+
+                <p>&nbsp;</p>
+                <h2>Source files</h2>
+                <p><span>Bantam</span>
+                    <ul>
+                        <li>Single sided FR-1 dimensions: 100 mm x 70 mm x ~1.57 mm</li>
+                        <li>Material positioning: x1.00y1.00z.163</li>
+                    </ul>
+                </p>
+                <p><span>GBR files</span>
+                    <ul>
+                        <li>Bottom and top: <a href="images/A5-Bottom-Edge_Cuts.gbr">A5-Bottom-Edge_Cuts.gbr</a></li>
+                        <li>Front and back: <a href="images/A5-Front-Edge_Cuts.gbr">A5-Front-Edge_Cuts.gbr</a></li>
+                        <li>Left and right: <a href="images/A5-Left-Edge_Cuts.gbr">A5-Left-Edge_Cuts.gbr</a></li>
+                    </ul>
+                </p>
+
+                <p>OnShape project file: <a
+                        href="https://cad.onshape.com/documents/1a7bf55e2f2a1fe3406c8e80/w/92d029cdb25a6402a093dbd9/e/4b14515db62b0b54856ef166">here</a>
+                </p>
+
+
+                <p>&nbsp;</p>
+                <h2>Thanks!</h2>
+                <p>Thanks to Kellie <a href="https://kelliead.github.io/">@kelliead</a> and Cindy <a
+                        href="https://cindygfeng.github.io/">@cindygfeng</a> with their help on using the milling
+                    machine. Also grateful for their tips on accounting for the tolerance so that parts will fit nicely
+                    together. Even though things fit in OnShape, the physical world is different.</p>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
