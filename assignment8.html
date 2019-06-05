@@ -1,0 +1,202 @@
+<head>
+    <link href="style.css" type="text/css" rel="stylesheet" media="all">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arsenal:400,400i,700,700i" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Assignment 8: Final project</title>
+</head>
+
+<body>
+    <div class="text-center section">
+        <div class="container">
+            <h3>Assignment 8: Final project</h3>
+            <div class="text-left">
+                <h2>Concept</h2>
+                <p>I created a decorative wall-mounted moose head sculpture with an embedded LED light using various techniques learned over the course of the class. Based on the initial sketches from the previous <a href="assignment7.html">assignment</a>,
+                    I created a digital representation using various modeling tools.</p>
+
+                <p>&nbsp;</p>
+                <h2>Execution</h2>
+                <p>For the initial design, I traced a profile of a moose head found online from the Dreamstime.com stock graphics site, located <a href="https://www.dreamstime.com/vector-illustration-black-silhouette-elk-isolated-white-background-icon-moose-horns-side-view-profile-vector-black-image102075345">here</a>,
+                    in Adobe Illustrator. This allowed me to scale the shape of the moose head later as a vector image.</p>
+                <p><img src="images/A8-1.png" width="50%" /></p>
+
+                <p>&nbsp;</p>
+                <h4>CAD using OnShape</h4>
+                <p>Using the moose vector as a template, a frame for holding the various pieces of this sculpture was created in OnShape. The basic shape of the light that will go into the sculpture was also roughly modeled in OnShape so that I can easily
+                    model the inserts taking into account for the light.</p>
+                <p><img src="images/A8-7.png" width="50%" /></p>
+                <p>&nbsp;</p>
+                <p>I created a mounting board that the frame will be attached to. A dowel joint was used to join the frame to the mounting board securely as shown below.</p>
+                <p><img src="images/A8-8.png" width="50%" /></p>
+                <p>&nbsp;</p>
+                <p>Slots were cut into the frame to securely hold the other pieces that will be attached to the frame later. The inserts will create depth for the sculpture. Since I planned on using 1.6 mm thick Delrin plastic inserts, the slots in the frame
+                    were had a width of 1.7 mm so that they are slightly bigger than the Delrin inserts. This ensured that the inserts will fit easily into the slot but are yet held in place by friction.</p>
+                <p><img src="images/A8-6.png" width="50%" /></p>
+
+                <p>&nbsp;</p>
+                <h4>Parametric modeling using Grasshopper</h4>
+                <p>I used Rhino3D and Grasshopper to quickly create the pieces that will form the snout and head of the moose. I wanted the inserts near the anterior of the sculpture to be smaller than the inserts at the posterior with a gradual size increase
+                    for the inserts in between. Grasshopper was used to create an oblong circular shape. I added numeric sliders to adjust the width and height of the inserts. As I had to create 7 of these shapes of various width and height, doing this
+                    parametrically sped up the modeling effort.</p>
+                <p><img src="images/A8-4.png" width="50%" /></p>
+                <p>&nbsp;</p>
+                <p>The complete Grasshopper script is shown below.</p>
+                <p><img src="images/A8-Grasshopper.png" width="75%" /></p>
+                <p>&nbsp;</p>
+                <p>These pieces were then exported into Adobe Illustrator for laser cutting.</p>
+
+                <p>&nbsp;</p>
+                <h4>3D printing</h4>
+                <p>The frame and mounting board from OnShape were exported into Cura for slicing and processing. These pieces were 3D printed as they form the superstructure for the sculpture and, as such, needed the extra depth for strength and stability.</p>
+                <p><img src="images/A8-3.png" width="50%" /></p>
+                <p>&nbsp;</p>
+                <p>Afterward, the pieces were fitted together as shown below.</p>
+                <p><img src="images/A8-IMG_20190604_224703283.jpg" width="50%" /></p>
+
+                <p>&nbsp;</p>
+                <h2>Laser cutting</h2>
+                <p>The pieces generated from Rhino3D and Grasshopper were exported into Adobe Illustrator. For efficiency while at the laser cutter, all the pieces were laid out in a single document. The inserts' line width was changed to 0.001 mm so that
+                    the laser cutter sees them as vector lines.</p>
+                <p><img src="images/A8-5.png" width="50%" /></p>
+                <p>&nbsp;</p>
+                <p>To rapidly and cheaply prototype the inserts to see if they will fit on the frame, I initially cut the inserts out of cardboard.</p>
+                <p><video width="320" height="240" controls>
+                      <source src="images/A8-VID_20190603_221628817.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video></p>
+                <p>&nbsp;</p>
+                <p>The inserts were test fitted into the slots on the frame. The slots were held loosely by friction between the 3D printed frame and the cardboard cutouts.</p>
+                <p><img src="images/A8-IMG_20190603_223757817.jpg" width="50%" /></p>
+                <p><img src="images/A8-IMG_20190603_223855792.jpg" width="50%" /></p>
+                <p>&nbsp;</p>
+                <p>Afterward, the inserts were cut out of Delrin for the final product.</p>
+                <p><video width="320" height="240" controls>
+                        <source src="images/A8-VID_20190603_221108276.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video></p>
+
+                <p>&nbsp;</p>
+                <h4>Assembly</h4>
+                <p>The Delrin inserts were arranged and inserted into the slots in the frame. The allowance in the slots was tight and held the inserts in place with a combination of friction and tension.</p>
+                <p><img src="images/A8-IMG_20190604_224954079.jpg" width="50%" /></p>
+                <p><img src="images/A8-IMG_20190604_224945274.jpg" width="50%" /></p>
+                <p>&nbsp;</p>
+                <p>Here is the final product when the LED light that’s embedded inside is lit up.</p>
+                <p><img src="images/A8-2.png" width="50%" /></p>
+                <p><img src="images/A8-IMG_20190604_221032524.jpg" width="50%" /></p>
+
+                <p>&nbsp;</p>
+                <h2>Source files</h2>
+                <p>OnShape model for frame and mounting board: <a href="https://cad.onshape.com/documents/e443fa245edd4c7876a65766/w/705cbea3926a786d72e7867c/e/a5844f31aa6550ea34b4d7ed">here</a></p>
+                <p>
+                    <div>Inserts:</div>
+                    <ul>
+                        <li>Grasshopper source: <a href="images/A8-curve.gh">A8-curve.gh</a></li>
+                        <li>Rhino3D model: <a href="images/A8-curve.3dm">A8-curve.3dm</a></li>
+                        <li>
+                            <div>Laser cut files:</div>
+                            <ul>
+                                <li>Combined cutouts: <a href="images/A8-cutouts.ai">A8-cutouts.ai</a></li>
+                                <li>Antlers: <a href="images/A8-Antlers.dxf">A8-Antlers.dxf</a></li>
+                                <li>Backplate: <a href="images/A8-Backplate.dxf">A8-Backplate.dxf</a></li>
+                                <li>Insert 1: <a href="images/A8-Piece1.dxf">A8-Piece1.dxf</a></li>
+                                <li>Insert 2: <a href="images/A8-Piece2.dxf">A8-Piece2.dxf</a></li>
+                                <li>Insert 3: <a href="images/A8-Piece3.dxf">A8-Piece3.dxf</a></li>
+                                <li>Insert 4: <a href="images/A8-Piece4.dxf">A8-Piece4.dxf</a></li>
+                                <li>Insert 5: <a href="images/A8-Piece5.dxf">A8-Piece5.dxf</a></li>
+                                <li>Insert 6: <a href="images/A8-Piece6.dxf">A8-Piece6.dxf</a></li>
+                                <li>Insert 7: <a href="images/A8-Piece7.dxf">A8-Piece7.dxf</a></li>
+                                <li>Insert 8: <a href="images/A8-Piece8.dxf">A8-Piece8.dxf</a></li>
+                                <li>Insert 9: <a href="images/A8-Piece9.dxf">A8-Piece9.dxf</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div>Epilog Fusion M2 laser cutter settings:</div>
+                            <ul>
+                                <li>Cardboard at 1.9 mm thickness: <i>50% speed/75% power/50% freq</i></li>
+                                <li>Delrin at 1.6 mm thickness: <i>7% speed/100% power/50% freq</i></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </p>
+                <p>
+                    <div>3D printed files:</div>
+                    <ul>
+                        <li>
+                            <div>Frame:</div>
+                            <ul>
+                                <li>STL: <a href="images/A8-Frame.stl">A8-Frame.stl</a></li>
+                                <li>Gcode: <a href="images/A8-Frame.gcode">A8-Frame.gcode</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div>Mounting board:</div>
+                            <ul>
+                                <li>STL: <a href="images/A8-MountingBoard.stl">A8-MountingBoard.stl</a></li>
+                                <li>Gcode: <a href="images/A8-MountingBoard.gcode">A8-MountingBoard.gcode</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div>Slicer settings:</div>
+                            <ul>
+                                <li>Layer height: 0.2 mm</li>
+                                <li>Use Skirt/Brim: checked</li>
+                                <li>Infill: 20%</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </p>
+
+                <p>&nbsp;</p>
+                <h2>Bill of Materials</h2>
+                <table>
+                    <tr>
+                        <th style="width: 15%">Quantity</th>
+                        <th style="width: 60%">Item</th>
+                        <th style="width: 20%">Cost</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Delrin plastic sheet</td>
+                        <td>$8</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>spindle PLA filament</td>
+                        <td>$10</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Large cardboard (for initial fitting prototyping)</td>
+                        <td>$5</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>LED light</td>
+                        <td>$5</td>
+                    </tr>
+                </table>
+
+                <p>&nbsp;</p>
+                <h2>Thanks!</h2>
+                <p>Thanks to this forum <a href="https://www.grasshopper3d.com/forum/topics/bezier-curve-in-grasshopper">post</a> on how to create bezier curves in Grasshopper.</p>
+                <p>&nbsp;</p>
+                <h4>References</h4>
+                <p>Kotozhekova, E. <i>Vector black silhouette moose with horns</i>. Retrieved from <a href="https://www.dreamstime.com/vector-illustration-black-silhouette-elk-isolated-white-background-icon-moose-horns-side-view-profile-vector-black-image102075345">https://www.dreamstime.com/vector-illustration-black-silhouette-elk-isolated-white-background-icon-moose-horns-side-view-profile-vector-black-image102075345</a>.</p>
+                <p>Stasiuk, D. (19 November 2013). <i>Bezier curve in grasshopper</i>. Retrieved from <a href="https://www.grasshopper3d.com/forum/topics/bezier-curve-in-grasshopper">https://www.grasshopper3d.com/forum/topics/bezier-curve-in-grasshopper</a>.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
